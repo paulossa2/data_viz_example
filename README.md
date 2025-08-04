@@ -46,7 +46,7 @@ npm run lint
 - [x] **Pruebas unitarias**  
   Implementadas para testar la transformación de datos. Nota: Highcharts + React tuvieron problemas de compatibilidad en pruebas de UI.
 - [ ] **Refinamiento UX/UI**  
-  Responsividad no implementada por restricciones de tiempo.
+  Responsividad no implementada.
 - [x] **Uso de Docker**
 - [ ] **Maqueta de UI**  
   Enfoque MVP iterativo sin mockups previos. 
