@@ -6,27 +6,28 @@
 ## Ejecución
 ### Usando Docker (desde la carpeta raíz):
 ```bash
+# Para ejecutar la aplicacion
 docker compose up -d
-```
-- Para ejecutar tests:  
-```bash
-docker compose run data_viz-web-1 npm tests
-```
-- Para ejecutar linter:  
-```bash
-docker compose run data_viz-web-1 npm run lint
+# Para ejecutar tests:
+docker compose run web npm test
+# Para ejecutar linter:  
+docker compose run web npm run lint
 ```
 
 ### Usando npm (desde la carpeta `front`):
 ```bash
-npm install && npm start
+npm install
+# Para ejecutar la aplicacion
+npm start
+# Para ejecutar tests
+npm run tests
+# Para ejecutar linter
+npm run lint
 ```
-- Para ejecutar tests: `npm run tests`
-- Para ejecutar linter: `npm run lint`
 
 ## Objetivos Clave
 - [x] **Ser funcional**  
-  Funciona correctamente, implementado con principios de programación funcional (inmutabilidad, sin efectos secundarios, evitación de objetos, etc).
+  Funciona correctamente y está implementado con principios de programación funcional (inmutabilidad, sin efectos secundarios, evitación de objetos, etc.).
 - [x] **Estado de carga durante la obtención de datos**  
   Implementado mediante programación asíncrona y gestión de estados.
 - [x] **Diseño intuitivo y agradable**  
@@ -41,11 +42,11 @@ npm install && npm start
 - [ ] **Accesibilidad y Usabilidad**  
   UI intuitiva pero con accesibilidad no priorizada (puntuación actual: [77%](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fpaulossa2.github.io%2Fdata_viz_example%2F&flag=us)).
 - [ ] **Mejora de rendimiento**  
-  No priorizado. *Sugerencia: React Query (TanStack Query) mejoraría rendimiento mediante caching.*
+  No priorizado. Pero, utilizando estrategias de caching como "React Query || TanStack Query".
 - [x] **Pruebas unitarias**  
-  Implementadas para transformación de datos. Nota: Dificultades con Highcharts + React en pruebas de UI.
+  Implementadas para testar la transformación de datos. Nota: Highcharts + React tuvieron problemas de compatibilidad en pruebas de UI.
 - [ ] **Refinamiento UX/UI**  
   Responsividad no implementada por restricciones de tiempo.
 - [x] **Uso de Docker**
 - [ ] **Maqueta de UI**  
-  Enfoque MVP iterativo sin mockups previos. *Sugerencia: Crear mockups en futuras iteraciones.*
+  Enfoque MVP iterativo sin mockups previos. 

@@ -21,7 +21,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint --fix --ext .js,.jsx src --ignore-pattern 'src/reportWebVitals.js' ",
+    "lint": "eslint --fix --ext .js,.jsx src --ignore-pattern 'src/reportWebVitals.js' --ignore-pattern 'src/index.js' ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "CI=true react-scripts test --env=jsdom",

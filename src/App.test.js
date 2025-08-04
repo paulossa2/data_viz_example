@@ -1,8 +1,8 @@
-import { createHighchartsOptions } from './plots/service';
 import dayjs from 'dayjs';
 
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
+import { createHighchartsOptions } from './plots/service';
 
 dayjs.extend(weekOfYear); // extend dayjs with week of year plugin
 dayjs.extend(advancedFormat); // extend dayjs with advanced format plugin
@@ -33,7 +33,7 @@ test('Create highcharts options 15 minutes granularity', () => {
   const options = createHighchartsOptions(responseExample, measure, frequency, graphType);
   expect(options).toEqual({
     chart: {
-      type: 'line'
+      type: 'line',
     },
     title: { text: `Gráfico de ${measure} (${frequency})` },
     xAxis: {
@@ -64,7 +64,7 @@ test('Create highcharts options daily granularity', () => {
   const options = createHighchartsOptions(responseExample, measure, frequency, graphType);
   expect(options).toEqual({
     chart: {
-      type: 'line'
+      type: 'line',
     },
     title: { text: `Gráfico de ${measure} (${frequency})` },
     xAxis: {
@@ -94,7 +94,7 @@ test('Create highcharts options weekly granularity', () => {
   const options = createHighchartsOptions(responseExample, measure, frequency, graphType);
   expect(options).toEqual({
     chart: {
-      type: 'line'
+      type: 'line',
     },
     title: { text: `Gráfico de ${measure} (${frequency})` },
     xAxis: {
@@ -124,7 +124,7 @@ test('Create highcharts options monthly granularity', () => {
   const options = createHighchartsOptions(responseExample, measure, frequency, graphType);
   expect(options).toEqual({
     chart: {
-      type: 'line'
+      type: 'line',
     },
     title: { text: `Gráfico de ${measure} (${frequency})` },
     xAxis: {
@@ -154,7 +154,7 @@ test('Create highcharts options annual granularity', () => {
   const options = createHighchartsOptions(responseExample, measure, frequency, graphType);
   expect(options).toEqual({
     chart: {
-      type: 'line'
+      type: 'line',
     },
     title: { text: `Gráfico de ${measure} (${frequency})` },
     xAxis: {
